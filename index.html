@@ -887,7 +887,7 @@ function restart(){clearInterval(timer);if(!still)timer=setInterval(()=>go((si+1
 restart();
 
 /* rotating branch name */
-const places=['Kollam','Kulathoor','Nedumangad','Kulathoopuzha'];let pi=0;const rot=$('#rot');
+const places=['Kollam'];let pi=0;const rot=$('#rot');
 if(!still)setInterval(()=>{rot.classList.add('out');setTimeout(()=>{pi=(pi+1)%places.length;rot.textContent=places[pi];rot.classList.remove('out')},300)},2600);
 
 /* scroll progress + back to top */

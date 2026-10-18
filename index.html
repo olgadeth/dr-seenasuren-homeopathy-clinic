@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Dr. Seena Homoeopathic Infertility Center, Kollam. Personalised homoeopathic care for infertility, ovarian conditions, skin, children and respiratory health by Dr. Seena Suren, BHMS.">
+<meta name="description" content="Dr. Seena Homoeopathic Infertility Center, Thirumangalam Rd, Kilikkollur, Kollam. Personalised homoeopathic care for infertility, ovarian conditions, skin, children and respiratory health by Dr. Seena Suren, BHMS.">
 <meta name="theme-color" content="#c73a76">
 <title>Dr. Seena Homoeopathic Infertility Center</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -568,13 +568,8 @@ footer .brand{color:var(--ink)}
         <div class="vcard">
           <h3>Dr. Seena Homoeopathic Infertility Center</h3>
           <dl>
-            <dt>Address</dt><dd><span class="Dr.seena.suren homeopathic clinic,Thirumangalam Rd, Kilikkollur, Chandanathope, Kottamkara,Kollam Keralam 691014">Dr.seena.suren homeopathic clinic,Thirumangalam Rd, Kilikkollur, Chandanathope, Kottamkara,Kollam Keralam 691014</span></dd>
-           <dt>Consulting hours</dt>
-<dd>
-  Mon – Fri: 10:00 AM – 12:00 PM &amp; 3:00 PM – 6:00 PM<br>
-  Saturday: <span style="color:var(--coral)">Closed</span><br>
-  Sunday: 3:00 PM – 6:00 PM
-</dd>
+            <dt>Address</dt><dd>Kollam – Thirumangalam Rd, Kilikkollur, Chandanathope, Kottamkara, Kerala 691014</dd>
+            <dt>Consulting hours</dt><dd>Mon – Fri: 10:00 AM – 12:00 PM &amp; 3:00 PM – 6:00 PM<br>Saturday: <span style="color:var(--coral)">Closed</span><br>Sunday: 3:00 PM – 6:00 PM</dd>
             <dt>Online</dt><dd>Video and phone consultations available</dd>
           </dl>
           <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -629,7 +624,7 @@ footer .brand{color:var(--ink)}
           <div class="two">
             <label class="fl">Preferred date<input type="date" id="date"></label>
             <label class="fl">Preferred time
-              <select id="slot"><option>Morning</option><option>Afternoon</option><option>Evening</option></select>
+              <select id="slot"><option>Morning (10 AM – 12 PM)</option><option>Evening (3 PM – 6 PM)</option></select>
             </label>
           </div>
           <div class="two">
@@ -665,7 +660,7 @@ footer .brand{color:var(--ink)}
         <div class="rcard">
           <div class="gscore"><strong>G</strong><div><div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><span class="muted">Reviews on Google</span></div></div>
           <p class="muted">Real reviews from the clinic's Google Business profile will appear here as cards, with the reviewer's name, rating and date.</p>
-          <span class="todo" style="justify-self:start">Google profile link to be added</span>
+          <span class="todo" style="justify-self:start">Dr.seena homeopathic center https://g.page/r/CRBUAMC4Uf-sEBM/review</span>
         </div>
         <form class="rcard" id="rvform" novalidate>
           <h3>Share your experience</h3>
@@ -710,7 +705,7 @@ footer .brand{color:var(--ink)}
         <span class="bnum">93870 96588</span>
       </div>
       <div><h4>Services</h4><ul><li><a href="#fertility">Infertility</a></li><li><a href="#services">Ovarian diseases</a></li><li><a href="#services">Dermatology</a></li><li><a href="#services">Paediatrics</a></li><li><a href="#services">Respiratory</a></li></ul></div>
-      <div><h4>Location</h4><ul><li>Kollam, Kerala</li><li><a href="#visit">Get directions</a></li><li>Clinic &amp; online consultations</li></ul></div>
+      <div><h4>Location</h4><ul><li>Thirumangalam Rd, Kilikkollur, Kollam 691014</li><li>Mon – Fri 10–12 &amp; 3–6 · Sun 3–6</li><li><a href="#visit">Get directions</a></li><li>Clinic &amp; online consultations</li></ul></div>
       <div><h4>Contact</h4><ul><li>Bookings: 93870 96588</li><li>Dr. Lavanya: 62388 00711</li><li>Online: 96335 44660</li><li><a href="https://wa.me/919387096588" target="_blank" rel="noopener">WhatsApp us</a></li><li>Email: <span class="todo">to add</span></li></ul></div>
     </div>
     <div class="legal">
@@ -813,9 +808,10 @@ const LINES={seena:{wa:'919387096588',show:'93870 96588',who:'the clinic (Dr. Se
 function line(){if(val('#doctor').startsWith('Dr. Lavanya'))return LINES.lavanya;if(mode()==='Online')return LINES.online;return LINES.seena}
 function routeHint(){const l=line();$('#route').innerHTML=`<svg width="18" height="18" style="flex:none;color:#25d366"><use href="#i-wa"/></svg><span>Your request goes to <b>${l.who}</b> on WhatsApp, ${l.show}.</span>`}
 f.addEventListener('change',routeHint);routeHint();
-try{const d=new Date();$('#date').min=d.toISOString().slice(0,10);d.setDate(d.getDate()+1);$('#date').value=d.toISOString().slice(0,10)}catch(e){}
+try{const d=new Date();$('#date').min=d.toISOString().slice(0,10);d.setDate(d.getDate()+1);if(d.getDay()===6)d.setDate(d.getDate()+1);$('#date').value=d.toISOString().slice(0,10)}catch(e){}
 function fmtDate(v){try{return new Date(v+'T00:00').toLocaleDateString('en-IN',{weekday:'short',day:'numeric',month:'short'})}catch(e){return v}}
 function err(m){$('#err').textContent=m;$('#err').hidden=false}
+$('#date').addEventListener('change',()=>{const d=new Date(val('#date')+'T00:00');if(d.getDay()===6){err('The clinic is closed on Saturdays. Please choose another day.');$('#date').value=''}else $('#err').hidden=true});
 f.addEventListener('submit',e=>{
   e.preventDefault();$('#err').hidden=true;
   if(!val('#date'))return err('Choose a preferred date.');
